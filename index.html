@@ -33,7 +33,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">WideSeek: Exploring Width Scaling for Broad Information Seeking via Multi-Agent Reinforcement Learning</h1>
+          <h1 class="title is-1 publication-title">WideSeek: Exploring Width Scaling for Broad Information<br>Seeking via Multi-Agent Reinforcement Learning</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="mailto:zelai.eecs@gmail.com">Zelai Xu</a><sup>1*</sup>,</span>
@@ -44,7 +44,9 @@
             <span class="author-block">
               Chunyang Zhu<sup>3</sup>,</span>
             <span class="author-block">
-              Shi Yu<sup>4</sup>,</span>
+              Shi Yu<sup>4</sup></span>
+          </div>
+          <div class="is-size-5 publication-authors">
             <span class="author-block">
               Weilin Liu<sup>3</sup>,</span>
             <span class="author-block">
@@ -70,16 +72,7 @@
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="#"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
+              <!-- arXiv Link. -->
               <span class="link-block">
                 <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
@@ -104,7 +97,7 @@
                 <a href="https://huggingface.co/collections/nics-efc/WideSeek"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="far fa-images"></i>
+                      <i class="fas fa-database"></i>
                   </span>
                   <span>Dataset</span>
                   </a>
@@ -114,7 +107,7 @@
                 <a href="https://huggingface.co/collections/nics-efc/WideSeek"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="fas fa-robot"></i>
+                      <img src="./static/images/hf-logo.svg" alt="HuggingFace" style="height: 1.2em; filter: invert(1);">
                   </span>
                   <span>Model</span>
                   </a>
@@ -150,26 +143,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Recent advancements in Large Language Models (LLMs) have largely focused on <b>depth scaling</b>,
-            where a single agent solves long-horizon problems with multi-turn reasoning and tool use.
-            However, as tasks grow broader, the key bottleneck shifts from individual competence to organizational capability.
-          </p>
-          <p>
-            In this work, we explore a complementary dimension of <b>width scaling</b> with multi-agent systems
-            to address broad information seeking. Existing multi-agent systems often rely on hand-crafted workflows
-            and turn-taking interactions that fail to parallelize work effectively.
-          </p>
-          <p>
-            To bridge this gap, we propose <span class="dnerf">WideSeek</span>, a lead-agent--subagent framework
-            trained via <b>multi-agent reinforcement learning (MARL)</b> to synergize scalable orchestration and parallel execution.
-            By utilizing a shared LLM with isolated contexts and specialized tools, WideSeek jointly optimizes the lead agent
-            and parallel subagents on a curated dataset of <b>20k broad information-seeking tasks</b>.
-          </p>
-          <p>
-            Extensive experiments show that <b>WideSeek-4B achieves an item F1 score of 40.0%</b> on the WideSearch benchmark,
-            which is <b>comparable to the performance of single-agent DeepSeek-R1-671B</b>.
-            Furthermore, WideSeek-4B exhibits consistent performance gains as the number of parallel subagents increases,
-            highlighting the effectiveness of width scaling.
+            Recent advancements in Large Language Models (LLMs) have largely focused on <b>depth scaling</b>, where a single agent solves long-horizon problems with multi-turn reasoning and tool use. However, as tasks grow broader, the key bottleneck shifts from individual competence to organizational capability. In this work, we explore a complementary dimension of <b>width scaling</b> with multi-agent systems to address broad information seeking. Existing multi-agent systems often rely on hand-crafted workflows and turn-taking interactions that fail to parallelize work effectively. To bridge this gap, we propose <span class="dnerf">WideSeek</span>, a lead-agent--subagent framework trained via <b>multi-agent reinforcement learning (MARL)</b> to synergize scalable orchestration and parallel execution. By utilizing a shared LLM with isolated contexts and specialized tools, WideSeek jointly optimizes the lead agent and parallel subagents on a curated dataset of <b>20k broad information-seeking tasks</b>. Extensive experiments show that <b>WideSeek-4B achieves an item F1 score of 40.0%</b> on the WideSearch benchmark, which is <b>comparable to the performance of single-agent DeepSeek-R1-671B</b>. Furthermore, WideSeek-4B exhibits consistent performance gains as the number of parallel subagents increases, highlighting the effectiveness of width scaling.
           </p>
         </div>
       </div>
@@ -274,87 +248,118 @@
         <!-- Main Results Table -->
         <h3 class="title is-4">Main Results on WideSearch</h3>
         <div class="content">
-          <table class="table is-bordered is-striped is-hoverable" style="margin: 0 auto;">
+          <table class="table is-bordered is-hoverable" style="margin: 0 auto; font-size: 0.95em;">
             <thead>
               <tr>
-                <th>Method</th>
-                <th>Size</th>
-                <th>Item F1 (Avg@4)</th>
-                <th>Item F1 (Max@4)</th>
-                <th>Row F1 (Avg@4)</th>
-                <th>SR (Avg@4)</th>
+                <th rowspan="2" style="vertical-align: middle;">Setting</th>
+                <th rowspan="2" style="vertical-align: middle;">Model</th>
+                <th colspan="2" style="text-align: center;">Item F1 Score (%)</th>
+                <th colspan="2" style="text-align: center;">Row F1 Score (%)</th>
+                <th colspan="2" style="text-align: center;">Success Rate (%)</th>
+              </tr>
+              <tr>
+                <th>Avg@4</th>
+                <th>Max@4</th>
+                <th>Avg@4</th>
+                <th>Max@4</th>
+                <th>Avg@4</th>
+                <th>Pass@4</th>
               </tr>
             </thead>
             <tbody>
+              <!-- Single Agent Block -->
               <tr>
-                <td colspan="6" style="text-align: center; font-weight: bold; background-color: #f0f0f0;">Single-Agent</td>
-              </tr>
-              <tr>
-                <td>DeepSeek-R1</td>
-                <td>671B</td>
-                <td>40.4</td>
-                <td>44.7</td>
-                <td>23.4</td>
-                <td>2.1</td>
-              </tr>
-              <tr>
-                <td>Search-R1</td>
-                <td>7B</td>
-                <td>25.8</td>
-                <td>30.1</td>
-                <td>12.7</td>
-                <td>0.5</td>
-              </tr>
-              <tr>
-                <td>Asearcher</td>
-                <td>7B</td>
-                <td>27.2</td>
-                <td>31.5</td>
-                <td>14.1</td>
-                <td>0.8</td>
-              </tr>
-              <tr>
-                <td>SingleSeek (Ours)</td>
-                <td>4B</td>
+                <td rowspan="5" style="vertical-align: middle; font-style: italic;">Single<br>Agent</td>
+                <td>SingleSeek-4B</td>
                 <td>28.1</td>
-                <td>32.4</td>
-                <td>13.9</td>
-                <td>0.6</td>
-              </tr>
-              <tr>
-                <td colspan="6" style="text-align: center; font-weight: bold; background-color: #f0f0f0;">Multi-Agent</td>
-              </tr>
-              <tr>
-                <td>OWL</td>
-                <td>8B</td>
-                <td>29.5</td>
-                <td>34.2</td>
-                <td>15.3</td>
+                <td>39.2</td>
+                <td>6.5</td>
+                <td>12.5</td>
+                <td>0.3</td>
                 <td>1.0</td>
               </tr>
               <tr>
-                <td>MiroFlow</td>
-                <td>8B</td>
-                <td>30.8</td>
-                <td>35.6</td>
-                <td>16.2</td>
-                <td>1.2</td>
+                <td>Qwen3-4B</td>
+                <td>20.1</td>
+                <td>30.2</td>
+                <td>3.0</td>
+                <td>4.8</td>
+                <td>0.0</td>
+                <td>0.0</td>
               </tr>
               <tr>
-                <td>Qwen3 (Multi-Agent)</td>
-                <td>4B</td>
-                <td>31.2</td>
-                <td>36.1</td>
-                <td>16.8</td>
-                <td>1.3</td>
+                <td>Search-R1-7B</td>
+                <td>15.5</td>
+                <td>24.4</td>
+                <td>2.0</td>
+                <td>4.4</td>
+                <td>0.0</td>
+                <td>0.0</td>
               </tr>
-              <tr style="background-color: #e8f5e9; font-weight: bold;">
-                <td>WideSeek (Ours)</td>
-                <td>4B</td>
-                <td>40.0</td>
-                <td>45.2</td>
-                <td>24.1</td>
-                <td>2.5</td>
+              <tr>
+                <td>ASearcher-7B</td>
+                <td>16.5</td>
+                <td>26.0</td>
+                <td>2.8</td>
+                <td>5.8</td>
+                <td>0.0</td>
+                <td>0.0</td>
+              </tr>
+              <tr>
+                <td>DeepSeek-R1-671B</td>
+                <td>41.3</td>
+                <td>55.1</td>
+                <td>20.7</td>
+                <td>31.7</td>
+                <td>0.4</td>
+                <td>1.5</td>
+              </tr>
+              <!-- Multi-Agent Block -->
+              <tr style="background-color: #f5d6d6;">
+                <td rowspan="5" style="vertical-align: middle; font-style: italic; background-color: white;">Multi-Agent<br>System</td>
+                <td><b>WideSeek-4B</b></td>
+                <td><b>40.0</b></td>
+                <td><b>51.8</b></td>
+                <td><b>15.3</b></td>
+                <td><b>24.4</b></td>
+                <td><b>0.4</b></td>
+                <td><b>1.0</b></td>
+              </tr>
+              <tr>
+                <td>Qwen3-4B</td>
+                <td>31.2</td>
+                <td>42.3</td>
+                <td>8.4</td>
+                <td>15.5</td>
+                <td>0.0</td>
+                <td>0.0</td>
+              </tr>
+              <tr>
+                <td>AgentFlow-7B</td>
+                <td>28.7</td>
+                <td>45.4</td>
+                <td>9.0</td>
+                <td>20.2</td>
+                <td>0.4</td>
+                <td>1.5</td>
+              </tr>
+              <tr>
+                <td>OWL-8B</td>
+                <td>20.2</td>
+                <td>29.3</td>
+                <td>3.1</td>
+                <td>5.8</td>
+                <td>0.0</td>
+                <td>0.0</td>
+              </tr>
+              <tr>
+                <td>MiroFlow-8B</td>
+                <td>23.7</td>
+                <td>37.7</td>
+                <td>5.8</td>
+                <td>12.7</td>
+                <td>0.4</td>
+                <td>1.0</td>
               </tr>
             </tbody>
           </table>
