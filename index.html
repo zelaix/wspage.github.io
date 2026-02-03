@@ -3,24 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="WideSeek: Exploring Width Scaling for Broad Information Seeking via Multi-Agent Reinforcement Learning">
+  <meta name="keywords" content="WideSeek, Multi-Agent, Reinforcement Learning, LLM, Information Seeking, Width Scaling">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
+  <title>WideSeek: Exploring Width Scaling for Broad Information Seeking via MARL</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -42,85 +28,51 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
-
-
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">WideSeek: Exploring Width Scaling for Broad Information Seeking via Multi-Agent Reinforcement Learning</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="mailto:zelai.eecs@gmail.com">Zelai Xu</a><sup>1*</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              Zhexuan Xu<sup>1*</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
+              Ruize Zhang<sup>2*</sup>,</span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
+              Chunyang Zhu<sup>3</sup>,</span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
+              Shi Yu<sup>4</sup>,</span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
+              Weilin Liu<sup>3</sup>,</span>
             <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span>
+              Quanlu Zhang<sup>3</sup>,</span>
+            <span class="author-block">
+              Wenbo Ding<sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="mailto:yuchao@sz.tsinghua.edu.cn">Chao Yu</a><sup>2&dagger;</sup>,</span>
+            <span class="author-block">
+              <a href="mailto:yu-wang@tsinghua.edu.cn">Yu Wang</a><sup>1&dagger;</sup></span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>EE, Tsinghua University,</span>
+            <span class="author-block"><sup>2</sup>SIGS, Tsinghua University,</span>
+            <span class="author-block"><sup>3</sup>Infinigence AI,</span>
+            <span class="author-block"><sup>4</sup>IIIS, Tsinghua University</span>
+          </div>
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>*</sup>Equal Contribution,</span>
+            <span class="author-block"><sup>&dagger;</sup>Corresponding Authors</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -129,7 +81,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -137,19 +89,9 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://github.com/thu-nics/WideSeek"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -159,13 +101,24 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                <a href="https://huggingface.co/collections/nics-efc/WideSeek"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
-                  <span>Data</span>
+                  <span>Dataset</span>
                   </a>
+              </span>
+              <!-- Model Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/collections/nics-efc/WideSeek"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-robot"></i>
+                  </span>
+                  <span>Model</span>
+                  </a>
+              </span>
             </div>
 
           </div>
@@ -178,73 +131,12 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
+      <img src="./static/images/scaling.png" alt="Depth vs Width Scaling" style="width: 100%;">
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+        <span class="dnerf">WideSeek</span> explores <b>width scaling</b> as a complementary dimension to depth scaling.
+        While depth scaling enhances performance through sequential multi-turn interactions,
+        width scaling orchestrates multi-agent systems for parallel execution.
       </h2>
-    </div>
-  </div>
-</section>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -258,185 +150,256 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            Recent advancements in Large Language Models (LLMs) have largely focused on <b>depth scaling</b>,
+            where a single agent solves long-horizon problems with multi-turn reasoning and tool use.
+            However, as tasks grow broader, the key bottleneck shifts from individual competence to organizational capability.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            In this work, we explore a complementary dimension of <b>width scaling</b> with multi-agent systems
+            to address broad information seeking. Existing multi-agent systems often rely on hand-crafted workflows
+            and turn-taking interactions that fail to parallelize work effectively.
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            To bridge this gap, we propose <span class="dnerf">WideSeek</span>, a lead-agent--subagent framework
+            trained via <b>multi-agent reinforcement learning (MARL)</b> to synergize scalable orchestration and parallel execution.
+            By utilizing a shared LLM with isolated contexts and specialized tools, WideSeek jointly optimizes the lead agent
+            and parallel subagents on a curated dataset of <b>20k broad information-seeking tasks</b>.
+          </p>
+          <p>
+            Extensive experiments show that <b>WideSeek-4B achieves an item F1 score of 40.0%</b> on the WideSearch benchmark,
+            which is <b>comparable to the performance of single-agent DeepSeek-R1-671B</b>.
+            Furthermore, WideSeek-4B exhibits consistent performance gains as the number of parallel subagents increases,
+            highlighting the effectiveness of width scaling.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
   </div>
 </section>
 
 
 <section class="section">
   <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+            <span class="dnerf">WideSeek</span> is a hierarchical lead-agent--subagent system trained via MARL
+            to synergize scalable orchestration and parallel execution for width scaling.
+          </p>
+        </div>
+        <img src="./static/images/overview.png" alt="WideSeek Overview" style="width: 100%;">
+        <div class="content has-text-justified" style="margin-top: 20px;">
+          <h3 class="title is-4">Lead Agent for Scalable Orchestration</h3>
+          <p>
+            The lead agent is responsible for decomposing a broad task into parallelizable subtasks and delegating them to subagents.
+            Unlike existing multi-agent systems that rely on hand-crafted workflows, our lead agent is trained to perform
+            <b>scalable and learnable orchestration</b>, enabling flexible coordination as the number of subagents increases.
+            The only tool available to the lead agent is <code>call_subagent</code>, which we intentionally restrict to avoid context pollution.
+          </p>
 
-    <div class="columns is-centered">
+          <h3 class="title is-4">Subagents for Parallel Execution</h3>
+          <p>
+            The subagents are responsible for <b>parallel information seeking</b>, enabling width scaling by executing multiple subtasks simultaneously.
+            This design addresses the context pollution and sequential execution bottlenecks that plague single-agent methods.
+            The subagents are equipped with two tools: <code>search</code> (retrieves relevant snippets and URLs) and
+            <code>access</code> (generates a summary from a specific URL).
+          </p>
 
-      <!-- Visual Effects. -->
-      <div class="column">
+          <h3 class="title is-4">Multi-Agent Reinforcement Learning</h3>
+          <p>
+            We jointly optimize the lead agent and subagents through end-to-end MARL with a shared model,
+            enabling the simultaneous learning of orchestration and information-seeking behaviors.
+            Our method builds upon GRPO and extends it for multi-agent systems with two key designs:
+          </p>
+          <ul>
+            <li><b>Multi-Agent Advantage Assignment:</b> We use a verifiable outcome reward for each multi-agent rollout,
+            where the same advantage is assigned to all agents and tokens in the same rollout.</li>
+            <li><b>Dual-Level Advantage Reweighting:</b> Token-level reweighting across turns and agent-level reweighting
+            to prevent rollouts with many subagents from dominating the gradient.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--/ Method. -->
+  </div>
+</section>
+
+
+<section class="section" style="background-color: #f5f5f5;">
+  <div class="container is-max-desktop">
+    <!-- Data Pipeline. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Training Data Construction</h2>
+        <div class="content has-text-justified">
+          <p>
+            To fully explore the potential of width scaling, WideSeek requires a substantial volume of broad information-seeking tasks.
+            We develop a <b>fully automated data construction pipeline</b> to synthesize high-quality training instances
+            consisting of schema-constrained queries and standardized tabular outputs.
+          </p>
+        </div>
+        <img src="./static/images/data_pipeline.png" alt="Data Pipeline" style="width: 100%;">
+        <div class="content has-text-justified" style="margin-top: 20px;">
+          <p>Our pipeline operates in three key stages:</p>
+          <ol>
+            <li><b>Query Generation:</b> We extract user intents from HybridQA and refine them into complex,
+            schema-constrained queries that mandate specific table structures and broad coverage.</li>
+            <li><b>Answer Generation:</b> We prompt the model to generate two responses independently along with the unique column(s),
+            enabling self-consistency verification.</li>
+            <li><b>QA Pair Filtering:</b> We rigorously screen the data by discarding instances with low consistency or insufficient difficulty,
+            ensuring that only robust and challenging samples remain in the final dataset.</li>
+          </ol>
+          <p>
+            The proposed pipeline yielded a final high-quality dataset of <b>20,000 instances</b> with a retention rate of 73.28%.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Data Pipeline. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Results. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+
+        <!-- Main Results Table -->
+        <h3 class="title is-4">Main Results on WideSearch</h3>
         <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+          <table class="table is-bordered is-striped is-hoverable" style="margin: 0 auto;">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>Size</th>
+                <th>Item F1 (Avg@4)</th>
+                <th>Item F1 (Max@4)</th>
+                <th>Row F1 (Avg@4)</th>
+                <th>SR (Avg@4)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="6" style="text-align: center; font-weight: bold; background-color: #f0f0f0;">Single-Agent</td>
+              </tr>
+              <tr>
+                <td>DeepSeek-R1</td>
+                <td>671B</td>
+                <td>40.4</td>
+                <td>44.7</td>
+                <td>23.4</td>
+                <td>2.1</td>
+              </tr>
+              <tr>
+                <td>Search-R1</td>
+                <td>7B</td>
+                <td>25.8</td>
+                <td>30.1</td>
+                <td>12.7</td>
+                <td>0.5</td>
+              </tr>
+              <tr>
+                <td>Asearcher</td>
+                <td>7B</td>
+                <td>27.2</td>
+                <td>31.5</td>
+                <td>14.1</td>
+                <td>0.8</td>
+              </tr>
+              <tr>
+                <td>SingleSeek (Ours)</td>
+                <td>4B</td>
+                <td>28.1</td>
+                <td>32.4</td>
+                <td>13.9</td>
+                <td>0.6</td>
+              </tr>
+              <tr>
+                <td colspan="6" style="text-align: center; font-weight: bold; background-color: #f0f0f0;">Multi-Agent</td>
+              </tr>
+              <tr>
+                <td>OWL</td>
+                <td>8B</td>
+                <td>29.5</td>
+                <td>34.2</td>
+                <td>15.3</td>
+                <td>1.0</td>
+              </tr>
+              <tr>
+                <td>MiroFlow</td>
+                <td>8B</td>
+                <td>30.8</td>
+                <td>35.6</td>
+                <td>16.2</td>
+                <td>1.2</td>
+              </tr>
+              <tr>
+                <td>Qwen3 (Multi-Agent)</td>
+                <td>4B</td>
+                <td>31.2</td>
+                <td>36.1</td>
+                <td>16.8</td>
+                <td>1.3</td>
+              </tr>
+              <tr style="background-color: #e8f5e9; font-weight: bold;">
+                <td>WideSeek (Ours)</td>
+                <td>4B</td>
+                <td>40.0</td>
+                <td>45.2</td>
+                <td>24.1</td>
+                <td>2.5</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="margin-top: 15px;">
+            <b>WideSeek-4B achieves performance comparable to DeepSeek-R1-671B</b> while using nearly <b>170x fewer parameters</b>.
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
         </div>
-      </div>
-      <!--/ Visual Effects. -->
 
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
+        <!-- Scaling Figure -->
+        <h3 class="title is-4" style="margin-top: 40px;">Width Scaling vs Depth Scaling</h3>
+        <img src="./static/images/exp_scaling.png" alt="Scaling Comparison" style="width: 80%;">
+        <div class="content has-text-justified" style="margin-top: 15px;">
+          <p>
+            Under <b>depth scaling</b>, the base model rapidly saturates as the single agent is bottlenecked by its fixed context length.
+            Once depth scaling plateaus, we switch to <b>width scaling</b> by increasing the number of parallel subagents.
+            <span class="dnerf">WideSeek</span>-4B demonstrates consistent performance gains with the number of subagents
+            and pushes the frontier of width scaling to <b>40% item F1 score with 10 subagents</b>.
+          </p>
+        </div>
+
+        <!-- Ablation Studies -->
+        <h3 class="title is-4" style="margin-top: 40px;">Ablation Studies</h3>
         <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
+          <div class="column">
+            <img src="./static/images/ablation_agent.png" alt="Agent Ablation" style="width: 100%;">
+            <p class="has-text-centered"><b>Lead Agent & Subagents</b></p>
           </div>
-
+          <div class="column">
+            <img src="./static/images/ablation_data.png" alt="Data Ablation" style="width: 100%;">
+            <p class="has-text-centered"><b>Training Data</b></p>
+          </div>
         </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
         <div class="content has-text-justified">
           <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
+            <b>Left:</b> The best performance is achieved only when both the lead agent and subagents use WideSeek-4B,
+            validating the importance of end-to-end training.
           </p>
           <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
+            <b>Right:</b> The model trained on the hybrid dataset (wide + deep) consistently outperforms those trained on either alone,
+            indicating that wide and deep data provide complementary benefits.
           </p>
         </div>
       </div>
     </div>
-    <!--/ Concurrent Work. -->
-
+    <!--/ Results. -->
   </div>
 </section>
 
@@ -444,11 +407,11 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@inproceedings{xu2026wideseek,
+  title     = {WideSeek: Exploring Width Scaling for Broad Information Seeking via Multi-Agent Reinforcement Learning},
+  author    = {Xu, Zelai and Xu, Zhexuan and Zhang, Ruize and Zhu, Chunyang and Yu, Shi and Liu, Weilin and Zhang, Quanlu and Ding, Wenbo and Yu, Chao and Wang, Yu},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  year      = {2026},
 }</code></pre>
   </div>
 </section>
@@ -456,29 +419,13 @@
 
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            This website is adapted from the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> project page.
+            It is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
           </p>
         </div>
       </div>
