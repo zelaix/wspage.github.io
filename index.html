@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="WideSeek: Exploring Width Scaling for Broad Information Seeking via Multi-Agent Reinforcement Learning">
-  <meta name="keywords" content="WideSeek, Multi-Agent, Reinforcement Learning, LLM, Information Seeking, Width Scaling">
+        content="WideSeek-R1: Exploring Width Scaling for Broad Information Seeking via Multi-Agent Reinforcement Learning">
+  <meta name="keywords" content="WideSeek-R1, Multi-Agent, Reinforcement Learning, LLM, Information Seeking, Width Scaling">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>WideSeek: Exploring Width Scaling for Broad Information Seeking via MARL</title>
+  <title>WideSeek-R1: Exploring Width Scaling for Broad Information Seeking via MARL</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -32,7 +32,7 @@
     <div class="container is-max-widescreen">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-2 publication-title">WideSeek: Exploring Width Scaling for Broad Information Seeking via Multi-Agent Reinforcement Learning</h1>
+          <h1 class="title is-2 publication-title">WideSeek-R1: Exploring Width Scaling for Broad Information Seeking via Multi-Agent Reinforcement Learning</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://nicsefc.ee.tsinghua.edu.cn/people/ZelaiXu">Zelai Xu</a><sup>1*</sup>,</span>
@@ -83,7 +83,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/thu-nics/WideSeek"
+                <a href="https://github.com/thu-nics/WideSeek-R1"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -93,7 +93,7 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://huggingface.co/collections/nics-efc/WideSeek"
+                <a href="https://huggingface.co/collections/nics-efc/WideSeek-R1"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-database"></i>
@@ -103,7 +103,7 @@
               </span>
               <!-- Model Link. -->
               <span class="link-block">
-                <a href="https://huggingface.co/collections/nics-efc/WideSeek"
+                <a href="https://huggingface.co/collections/nics-efc/WideSeek-R1"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <img src="./static/images/hf-logo.svg" alt="HuggingFace" style="height: 1.2em;">
@@ -134,7 +134,7 @@
         </div>
       </div>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">WideSeek</span> explores <b>width scaling</b> as a complementary dimension to depth scaling.
+        <span class="dnerf">WideSeek-R1</span> explores <b>width scaling</b> as a complementary dimension to depth scaling.
         While depth scaling enhances performance through sequential multi-turn interactions,
         width scaling orchestrates multi-agent systems for parallel execution.
       </h2>
@@ -151,7 +151,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Recent advancements in Large Language Models (LLMs) have largely focused on <b>depth scaling</b>, where a single agent solves long-horizon problems with multi-turn reasoning and tool use. However, as tasks grow broader, the key bottleneck shifts from individual competence to organizational capability. In this work, we explore a complementary dimension of <b>width scaling</b> with multi-agent systems to address broad information seeking. Existing multi-agent systems often rely on hand-crafted workflows and turn-taking interactions that fail to parallelize work effectively. To bridge this gap, we propose <span class="dnerf">WideSeek</span>, a lead-agent--subagent framework trained via <b>multi-agent reinforcement learning (MARL)</b> to synergize scalable orchestration and parallel execution. By utilizing a shared LLM with isolated contexts and specialized tools, WideSeek jointly optimizes the lead agent and parallel subagents on a curated dataset of <b>20k broad information-seeking tasks</b>. Extensive experiments show that <b>WideSeek-4B achieves an item F1 score of 40.0%</b> on the WideSearch benchmark, which is <b>comparable to the performance of single-agent DeepSeek-R1-671B</b>. Furthermore, WideSeek-4B exhibits consistent performance gains as the number of parallel subagents increases, highlighting the effectiveness of width scaling.
+            Recent advancements in Large Language Models (LLMs) have largely focused on <b>depth scaling</b>, where a single agent solves long-horizon problems with multi-turn reasoning and tool use. However, as tasks grow broader, the key bottleneck shifts from individual competence to organizational capability. In this work, we explore a complementary dimension of <b>width scaling</b> with multi-agent systems to address broad information seeking. Existing multi-agent systems often rely on hand-crafted workflows and turn-taking interactions that fail to parallelize work effectively. To bridge this gap, we propose <span class="dnerf">WideSeek-R1</span>, a lead-agent--subagent framework trained via <b>multi-agent reinforcement learning (MARL)</b> to synergize scalable orchestration and parallel execution. By utilizing a shared LLM with isolated contexts and specialized tools, WideSeek-R1 jointly optimizes the lead agent and parallel subagents on a curated dataset of <b>20k broad information-seeking tasks</b>. Extensive experiments show that <b>WideSeek-R1-4B achieves an item F1 score of 40.0%</b> on the WideSearch benchmark, which is <b>comparable to the performance of single-agent DeepSeek-R1-671B</b>. Furthermore, WideSeek-R1-4B exhibits consistent performance gains as the number of parallel subagents increases, highlighting the effectiveness of width scaling.
           </p>
         </div>
       </div>
@@ -169,11 +169,11 @@
         <h2 class="title is-3">Method</h2>
         <div class="content has-text-justified">
           <p>
-            <span class="dnerf">WideSeek</span> is a hierarchical lead-agent--subagent system trained via MARL
+            <span class="dnerf">WideSeek-R1</span> is a hierarchical lead-agent--subagent system trained via MARL
             to synergize scalable orchestration and parallel execution for width scaling.
           </p>
         </div>
-        <img src="./static/images/overview.png" alt="WideSeek Overview" style="width: 100%;">
+        <img src="./static/images/overview.png" alt="WideSeek-R1 Overview" style="width: 100%;">
         <div class="content has-text-justified" style="margin-top: 20px;">
           <h3 class="title is-4">Lead Agent for Scalable Orchestration</h3>
           <p>
@@ -219,7 +219,7 @@
         <h2 class="title is-3">Training Data Construction</h2>
         <div class="content has-text-justified">
           <p>
-            To fully explore the potential of width scaling, WideSeek requires a substantial volume of broad information-seeking tasks.
+            To fully explore the potential of width scaling, WideSeek-R1 requires a substantial volume of broad information-seeking tasks.
             We develop a <b>fully automated data construction pipeline</b> to synthesize high-quality training instances
             consisting of schema-constrained queries and standardized tabular outputs.
           </p>
@@ -278,7 +278,7 @@
               <!-- Single Agent Block -->
               <tr>
                 <td rowspan="5" style="vertical-align: middle; font-style: italic;">Single<br>Agent</td>
-                <td>SingleSeek-4B</td>
+                <td>SingleSeek-R1-4B</td>
                 <td>28.1</td>
                 <td>39.2</td>
                 <td>6.5</td>
@@ -325,7 +325,7 @@
               <!-- Multi-Agent Block -->
               <tr style="background-color: #f5d6d6;">
                 <td rowspan="5" style="vertical-align: middle; font-style: italic; background-color: white;">Multi-Agent<br>System</td>
-                <td><b>WideSeek-4B</b></td>
+                <td><b>WideSeek-R1-4B</b></td>
                 <td><b>40.0</b></td>
                 <td><b>51.8</b></td>
                 <td><b>15.3</b></td>
@@ -372,7 +372,7 @@
             </tbody>
           </table>
           <p style="margin-top: 15px;">
-            <b>WideSeek-4B achieves performance comparable to DeepSeek-R1-671B</b> while using nearly <b>170x fewer parameters</b>.
+            <b>WideSeek-R1-4B achieves performance comparable to DeepSeek-R1-671B</b> while using nearly <b>170x fewer parameters</b>.
           </p>
         </div>
 
@@ -383,7 +383,7 @@
           <p>
             Under <b>depth scaling</b>, the base model rapidly saturates as the single agent is bottlenecked by its fixed context length.
             Once depth scaling plateaus, we switch to <b>width scaling</b> by increasing the number of parallel subagents.
-            <span class="dnerf">WideSeek</span>-4B demonstrates consistent performance gains with the number of subagents
+            <span class="dnerf">WideSeek-R1</span>-4B demonstrates consistent performance gains with the number of subagents
             and pushes the frontier of width scaling to <b>40% item F1 score with 10 subagents</b>.
           </p>
         </div>
@@ -402,7 +402,7 @@
         </div>
         <div class="content has-text-justified">
           <p>
-            <b>Left:</b> The best performance is achieved only when both the lead agent and subagents use WideSeek-4B,
+            <b>Left:</b> The best performance is achieved only when both the lead agent and subagents use WideSeek-R1-4B,
             validating the importance of end-to-end training.
           </p>
           <p>
@@ -421,7 +421,7 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@inproceedings{xu2026wideseek,
-  title     = {WideSeek: Exploring Width Scaling for Broad Information Seeking via Multi-Agent Reinforcement Learning},
+  title     = {WideSeek-R1: Exploring Width Scaling for Broad Information Seeking via Multi-Agent Reinforcement Learning},
   author    = {Xu, Zelai and Xu, Zhexuan and Zhang, Ruize and Zhu, Chunyang and Yu, Shi and Liu, Weilin and Zhang, Quanlu and Ding, Wenbo and Yu, Chao and Wang, Yu},
   booktitle = {International Conference on Machine Learning (ICML)},
   year      = {2026},
